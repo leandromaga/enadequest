@@ -1,5 +1,4 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-// import { aiGeneration, aiAutoGeneration, aiComplexidadeAnalyser } from './utils/analise.js'; // ajuste o caminho
 
 const apiKey = process.env.REACT_APP_AI_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);

@@ -30,9 +30,10 @@ Siga o seguintes passos para executar a ferramenta.
 
 ### Execução do código react
 1. Para o funcionamento correto da aplicação deve adicionar duas variáveis de ambiente no arquivo .env:
-1.1 Adicionar a sua chave de acesso a API do Google Gemini, e a URL do banco de dados confome o exemplo a seguir (Altere somente os valores em negrito):
-- REACT_APP_AI_KEY= **chave_de_acesso**
-- DATABASE_URL= postgres://postgres:**user_postgre**@localhost:**porta**/**nome_banco**
+1.1 Crie um arquivo na raiz no projeto chama **.env** e adicione a sua chave de acesso a API do Google Gemini, e a URL do banco de dados confome o exemplo a seguir (Altere somente os valores em negrito):
+- REACT_APP_AI_KEY=**chave_de_acesso**
+- DATABASE_URL=postgres://postgres:**user_postgre**@localhost:**porta**/**nome_banco**
+- PORT:5001
 2. Execute o seguinte código no terminal para instalas o node no projeto:
 - `npm install`
 3. Verifique se possuí as dependências do Google Gemini e do  Axios no arquivo `package.json`, caso contrário execute os seguinte códigos no terminar:
