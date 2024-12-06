@@ -41,3 +41,7 @@ Siga o seguintes passos para executar a ferramenta.
 - `npm install @google/generativa-ai`
 - `npm install concurrently --save-dev`
 4. Feita configuração das variáveis de ambiente e instalação das dependências, basta abrir o terminal e executa `npm start` que tanto o servidor como a aplicação vão ser executados.
+
+
+##### Autor: Leandro Cunha Magalhães
+##### Orientador: Tássio Sirqueira
