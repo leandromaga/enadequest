@@ -1,0 +1,90 @@
+.modal-dificuldade {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-open {
+    overflow: hidden; /* Impede rolagem no fundo */
+  }
+  
+  .modal-open .modal-overlay {
+    pointer-events: auto; /* Permite eventos de clique no overlay do modal */
+  }
+  
+  .modal-header {
+    padding:15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #282c34;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .modal-title {
+    color: black; /* Certifique-se de que a cor do título seja visível */
+    margin: 0; /* Remove margens do título */
+  }
+  
+  .modal-text {
+    text-align: justify; /* Justifica o texto */
+    text-indent: 20px; /* Indentação para a primeira linha */
+    margin: 0; /* Remove a margem padrão do parágrafo */
+    line-height: 1.5; /* Define a altura da linha para melhor legibilidade */
+  }
+  
+  .modal-content {
+    padding: 20px 50px; /* Adiciona padding interno */
+    margin-top: 10px; /* Margem superior para separar do cabeçalho */
+    overflow-y: auto;
+  }
+  
+  .modal-content p {
+    margin: 0; /* Remove a margem padrão do parágrafo */
+  }
+  
+  .modal-header h2 {
+    color: white; /* Definindo a cor do texto do título como branco */
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 999;
+  }
+  
+  .action-button {
+    transition: opacity 0.3s; /* Adiciona uma transição suave na opacidade */
+  }
+  
+  .modal-open .action-button {
+    opacity: 0.5; /* Define a opacidade como 50% quando o modal está aberto */
+    pointer-events: none; /* Desabilita os eventos de clique nos botões */
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white; /* Cor do botão de fechar */
+    font-size: 16px; /* Tamanho da fonte do botão de fechar */
+  }
+  

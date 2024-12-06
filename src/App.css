@@ -1,0 +1,384 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Inclui padding e bordas nas dimensões dos elementos */
+}
+
+body {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove paddings padrão */
+  overflow-x: hidden; /* Previne overflow horizontal */
+  font-family: Arial, sans-serif; /* Define uma fonte padrão */
+}
+
+.App {
+  text-align: center;
+  max-width: 1200px; /* Limita a largura máxima para centralizar o conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente o contêiner */
+  padding: 20px; /* Adiciona padding interno */
+}
+
+/* Logo Animation */
+.App-logo {
+  height: 5vmin;
+  pointer-events: none;
+  width: auto;
+  max-width: 100%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header */
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #282c34;
+  width: 100vw; /* Ocupa toda a largura da viewport */
+  height: 60px; /* Altura fixa para o header */
+  padding: 0 20px; /* Padding horizontal */
+  color: white;
+  position: fixed; /* Fixa o header no topo */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que o header fique sobre outros elementos */
+}
+
+.App-header img {
+  margin-right: 20px;
+}
+
+.App-header button {
+  padding: 8px 16px; /* Ajusta o padding dos botões no header */
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App-header button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Espaço para evitar que o conteúdo fique sob o header fixo */
+.main-content {
+  padding-top: 50px; /* Espaço suficiente para o header */
+}
+
+.justified-text {
+  text-align: justify;
+}
+
+.indented-text {
+  text-indent: 2em;
+}
+
+/* Título */
+h2 {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #555;
+}
+
+
+/* Config Section */
+.config-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px; /* Reduz o espaçamento entre os contêineres */
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Config Item */
+.config-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reduz o espaçamento interno */
+}
+
+/* Labels */
+.config-label {
+  font-weight: bold;
+  font-size: 16px; /* Reduzi o tamanho da fonte */
+  margin-right: 8px;
+  min-width: 80px; /* Reduzi a largura mínima */
+  text-align: right;
+}
+
+
+.correction-label {
+  font-weight: bold;
+  font-size: 15px; /* Reduzi o tamanho da fonte */
+  margin-right: 8px;
+  
+}
+
+/* Botões de Configuração */
+.config-button {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 36px; /* Altura ajustada para ser proporcional */
+  font-size: 14px; /* Tamanho da fonte reduzido */
+  padding: 0 12px; /* Padding horizontal ajustado */
+  margin: 0 3px; /* Espaçamento vertical reduzido */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.config-button:hover:enabled {
+  background-color: #f0f0f0;
+}
+
+.config-button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-upload-label {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.file-upload-label:hover {
+  background-color: #0056b3;
+}
+
+.file-name {
+  margin-left: 8px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.clear-file-button {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.clear-file-button:hover {
+  background-color: #c9302c;
+}
+
+
+.info-button {
+  width: 20px; /* Ajuste o tamanho do botão aqui */
+  height: 20px;
+  border-radius: 50%; /* Torna o botão circular */
+  background-color: #d3d3d3; /* Cor do botão */
+  color: #555; /* Cor do texto */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 12px; /* Tamanho da interrogação */
+  position: relative;;
+  margin-left: 5px; /* Espaçamento entre o botão e o select */
+  padding: 0;
+  z-index: 1;
+}
+
+.info-button:hover {
+  background-color: #b5b5b5; /* Cor ao passar o mouse */
+}
+
+/* Botões de Ação */
+.action-button {
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  height: 36px; /* Altura consistente com os botões de configuração */
+  font-size: 14px; /* Tamanho da fonte reduzido */
+  padding: 0 12px; /* Padding horizontal ajustado */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 10px 0; /* Espaçamento vertical reduzido */
+
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.action-button:hover:enabled {
+  background-color: #0056b3;
+}
+
+.action-button:disabled {
+  background-color: #a6c8ff;
+  cursor: not-allowed;
+}
+
+/* Select e Textarea */
+.styled-select {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px; /* Tamanho da fonte reduzido */
+  min-width: 150px; /* Reduzi a largura mínima */
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+styled-select option {
+  max-height: 30px; /* Tamanho da fonte reduzido */  
+}
+
+.styled-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.styled-input {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px; /* Tamanho da fonte reduzido */
+  min-width: 150px; /* Reduzi a largura mínima */
+  height: 36px; /* Altura consistente com os botões */
+}
+
+/* Caixas de Conteúdo */
+.generated-question-box,
+.verification-result-box {
+  margin-top: 15px; /* Reduzi o espaçamento superior */
+  margin-bottom: 15px;
+  padding: 12px; /* Reduzi o padding interno */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  font-size: 14px; /* Tamanho da fonte reduzido */
+}
+
+
+/* Estilos para o Toggle Switch */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 25px; /* Distância da borda direita */
+  justify-content: flex-end;
+}
+
+.toggle-container input {
+  display: none; /* Esconde a checkbox padrão */
+}
+
+.toggle-label {
+  width: 45px; /* Largura do interruptor */
+  height: 20px; /* Altura do interruptor */
+  background-color: #ccc; /* Cor de fundo padrão */
+  border-radius: 34px; /* Bordas arredondadas */
+  position: relative; /* Para o círculo interno */
+  cursor: pointer; /* Muda o cursor ao passar sobre o toggle */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  margin-left: 3px;;
+}
+
+.toggle-label::after {
+  content: ""; /* Cria o círculo interno */
+  position: absolute;
+  top: 2px; /* Espaçamento do topo */
+  left: 3px; /* Espaçamento da esquerda */
+  width: 16px; /* Largura do círculo */
+  height: 16px; /* Altura do círculo */
+  background-color: white; /* Cor do círculo */
+  border-radius: 50%; /* Bordas arredondadas */
+  transition: transform 0.3s; /* Transição suave para o movimento */
+}
+
+
+/* Estilo quando o toggle está ativado */
+input:checked + .toggle-label {
+  background-color: #007BFF; /* Cor de fundo quando ativado */
+}
+
+input:checked + .toggle-label::after {
+  transform: translateX(24px); /* Move o círculo para a direita */
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .config-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px; /* Reduzi o gap para telas menores */
+  }
+
+  .config-item {
+    justify-content: center;
+    width: 100%;
+    gap: 6px; /* Reduzi o gap interno */
+  }
+
+  .config-label {
+    text-align: left;
+    margin-right: 5px;
+    min-width: 0;
+    font-size: 14px; /* Tamanho da fonte reduzido */
+  }
+
+  .styled-select {
+    min-width: 100%;
+    margin-left: 0;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .config-button,
+  .action-button {
+    width: 100%;
+    text-align: center;
+    height: 36px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  h2 {
+    margin-left: 10px; /* Reduzi a margem esquerda */
+    padding: 0 10px; /* Adicionei padding horizontal */
+    text-align: center; /* Centralizei o texto em telas menores */
+  }
+}
