@@ -10,7 +10,7 @@ Esse projeto foi construído como tema de um Trabalho de Conclusão de Curso, co
 - Jupyter Notebook(Nesse proeto foi utilziada a extensão no VSCode)
 - PostgreSQL v16.2
 
-Será necessário também ter uma chave de acesso a API do Google Gemini.
+- Será necessário também ter uma chave de acesso a API do Google Gemini.
 
 ## Preparação do Ambiente
 
